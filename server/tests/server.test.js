@@ -167,7 +167,6 @@ describe('PATCH /todos/:id', () => {
         text: text})
       .expect(200)
       .expect((res) => {
-        console.log(res.body);
         expect(res.body.todo.text).toBe(text);
         expect(res.body.todo.completed).toBe(false);
         expect(res.body.todo.completedAt).toNotExist();
